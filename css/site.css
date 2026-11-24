@@ -75,7 +75,8 @@ a:focus-visible {
     color: var(--muted);
 }
 
-.date {
+.date,
+.post-note {
     font-size: 0.95rem;
     color: var(--muted);
 }
@@ -118,6 +119,9 @@ a:focus-visible {
     margin: 1rem 0 0;
     padding: 0;
 }
+
+/* Space between one section's list and the next section's heading. */
+.posts + .section-title { margin-top: 2.5rem; }
 
 .post {
     display: flex;
