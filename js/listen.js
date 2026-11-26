@@ -166,7 +166,8 @@
 
     function prepare() {
         if (prepared) { return; }
-        var blocks = essay.querySelectorAll('.essay-title, h2, p');
+        // Paragraphs marked data-listen-skip (notes added after recording) aren't in the narration.
+        var blocks = essay.querySelectorAll('.essay-title, h2, p:not([data-listen-skip])');
         Array.prototype.forEach.call(blocks, wrapBlock);
         prepared = true;
     }
